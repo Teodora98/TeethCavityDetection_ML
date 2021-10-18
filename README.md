@@ -1,2 +1,2 @@
-# TeethCarityDetection_ML
-Teeth carity detection using machine learning
+# TeethCavityDetection_ML
+Teeth cavity detection using machine learning
