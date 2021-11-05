@@ -1,5 +1,9 @@
-# Teeth Cavity Detection
-Detection of teeth anomalies 
+<p align="center">
+<img src="Teeth%20Cavity%20Detection.png" width=400)>
+<br>
+<h1 align="center">Dental Cavity Detection</h1>
+
+<p align="center">Detection of teeth anomalies </p>
 
 [![Python 3.7](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/downloads/release/python-370/)
 
