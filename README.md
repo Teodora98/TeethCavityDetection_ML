@@ -5,7 +5,7 @@
 
 <p align="center">Detection of teeth anomalies </p>
 
-<p align="right">
+<p align="center">
 <a href="https://www.python.org/downloads/release/python-370/" target="_blank">
   <img src="https://img.shields.io/badge/python-3.7-blue.svg">
 </a>
