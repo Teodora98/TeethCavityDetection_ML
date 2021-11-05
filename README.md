@@ -6,20 +6,20 @@ Detection of teeth anomalies
 Keras implementation of VGG16 fine tuned model for hail damage detection.
 ------------
 
+## Introduction :wave:
+Dental caries or cavities, more commonly known as tooth decay, are caused by a breakdown of the tooth enamel. This breakdown is the result of bacteria on teeth that breakdown foods and produce acid that destroys tooth enamel and results in tooth decay. Early cavity detection can mean less damage, less pain & less hassle down the road. While preventing decay is always the primary goal, we understand that not everyone has perfect oral health all the time, so early detection & treatment are essential tools for preserving your beautiful smile! X-rays can show tooth decay, fillings and gum disease.
 
+The goal of our project was to develop a model that can process a panoramic x ray image and can separate the teeth with caries from the healthy teeth. With this model we speed up the process of cavity detection, and we also enable patients to have access to these information  and be informed about their health.
 
-
-## Trained model
+## File github structure
+#### Trained model
 Trained Model Download ([Link](https://drive.google.com/file/d/1FYmIUx9zbJ4QnUsQueO6O48U0SOfx93I/view?usp=sharing))
 
-## Dataset  
+#### Dataset  
+We croppied individual teeth from 400 panoramic x-ray images, afther taht we were able to create 2 datasets we needed in order to train our model. One dataset contains healthy theeth and the other containts theeth with caries. <br>
+You can find the datasets we used to train our model [here](https://drive.google.com/drive/folders/1CJsVA3ggEg0lE_oS1dnnIE1OxWzOaeXV?usp=sharing).
 
-### Official Dataset
-Images Located in :  ([Link](https://drive.google.com/drive/folders/1CJsVA3ggEg0lE_oS1dnnIE1OxWzOaeXV?usp=sharing))
-
-
-
-## File hierarchy
+#### File hierarchy
 Once you download pretrained model and dataset, please follow this project structure:
 ```
   
@@ -28,34 +28,13 @@ Once you download pretrained model and dataset, please follow this project struc
     |── NotebookPrediction.ipynb              Prediction script
 ```    
 
-## Requirements
+#### Requirements
 3 <= Python <= 3.7 (Please note that python serialization algorithm is changed from v3.6+)
-
-
 
 #### Example Data generation command:
 ```
 python data_generation.py -config config/generator.json
 ```
-
-
-
-## Validation performance 
-```
- Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.465
- Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.811
- Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.499
- Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
- Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.437
- Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.474
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.353
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.617
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.623
- Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = -1.000
- Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.617
- Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.618
-```
-
 
 # Best Validation performance on Synthetized Dataset
 
@@ -68,39 +47,30 @@ python data_generation.py -config config/generator.json
 
 # Time Benchmark 
   * ~0.1s Inference Time on GPU (Tesla K80) 
-  
-  
-
-
 --------------------
 
 # Classification
 We use binary classifier (cavity/no cavity) on detected objects
 
+## Phases of project implementation
+### 📥 Phase 1: Dataset collection
+### 💪 Phase 2: Training the model
+### ✔️ Phase 3: Detection of cavity in panoramic x-rays
+This part of the project is still under construction 👷‍♀️
+
 
 
 ##  Conclusion
-Both models are with roughly the same performance : 
-* Architecture I(OD Based) showed some better results on recall
-* Architecture II (Classification-based) showed some better results on precision
 
-Architecture I (Object detection approach) with adding the synthetization and the  classes "Damage", "Looks Like Damage" and "Bg" is more production ready approach because : 
-* It’s fast 
-* Capture more spatial information
-* I strongly believe that it can be trained even better in order to extract the maximum performance
+## Future work
+This model has a lot of potential for future implementation. We can develop it into a model that detects more than cavity, it can also detect hidden dental structures(wisdom teeth), bone loss and..??
+This model can be implented into an aplication that will make it easier for dentist to keep a visual track of a patient theeth health, and make it easier for patients to consult with diffrents dentists.
 
-It can be further more improved with : 
-* Label More data
-* Synthetize with more and different effects
-* Use faster architectures
-* Architecture that solves class imbalance problem
+## 👧 Team Members 💪
 
-Architecture II works well and it’s a great approach but it’s recommended only for high speed development 
-*  It will cost a lot in production
-* Unable to estimate execution time
-    * Speed is dependent on number of detected objects
-
-
-## Team Members
+- Teodora Mladenovska
+- Ana Angelova
+- Tanja Ivkovska
+- Mihaela Miova
 
 
