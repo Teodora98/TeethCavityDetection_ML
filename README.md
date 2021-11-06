@@ -62,6 +62,20 @@ We use binary classifier (cavity/no cavity) on detected objects
 ## Phases of project implementation
 ### 📥 Phase 1: Dataset collection
 ### 💪 Phase 2: Training the model
+To solve this problem, we used several pre-trained CNN models. The results are shown below:
+
+
+| Model         | Epochs        | Loss  | Train Accuracy| Test Accuracy|      
+| ------------- | ------------- | -------------| -------------| -------------|
+| ResNet50   | 50          |10(-5)  | 97.00% | 89.00%|
+| **VGG16 - Used Data Augumentation** | **80**  | **10(-5)** | **99.54%** | **90.68%**|
+| MobileNetV2  | 100          |10(-5)  | 99.84% | 88.13%|
+
+Best overall results were achieved with transfer-learning using pre-trained **VGG16** an re-train it on our data.
+
+The learning curves for this model are shown in the figure below.
+
+
 ### ✔️ Phase 3: Detection of cavity in panoramic x-rays
 This part of the project is still under construction 👷‍♀️
 
