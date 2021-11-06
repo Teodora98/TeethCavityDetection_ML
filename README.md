@@ -41,7 +41,7 @@ We use binary classifier (cavity/no cavity) on detected objects
 ### 📥 Phase 1: Dataset collection
 In order to train a deep-learning model to classify whether a tooth is healty or with caries cavity, we needed an appropriate dataset with balanced distribution of images for the two classes:
   
-📂	Healthy teeth / without caries
+📂	Healthy teeth / without caries <br>
 📂	Teeth with Tooth decay / with caries
 
 We use data from [Mendeley Data](https://data.mendeley.com/datasets/hxt48yk462/1). The dataset consists of anonymized and deidentified panoramic dental X-rays of 116 patients, taken at Noor Medical Imaging Center, Qom, Iran. The subjects cover a wide range of dental conditions from healthy, to partial and complete edentulous cases. From each image we cut each tooth separately and classified it into one of the groups. In the end, we got a set of 401 pictures of healthy teeth, and 400 pictures of teeth with caries, which we used further to train our model.
