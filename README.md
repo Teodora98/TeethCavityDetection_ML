@@ -1,5 +1,5 @@
 <p align="center">
-<img src="Teeth%20Cavity%20Detection.png" width=400)>
+<img src="images/Teeth%20Cavity%20Detection.png" width=400)>
 <br>
 <h1 align="center">Dental Cavity Detection</h1>
 
@@ -19,8 +19,6 @@ Dental caries or cavities, more commonly known as tooth decay, are caused by a b
 The goal of our project was to develop a model that can process a panoramic x ray image and can separate the teeth with caries from the healthy teeth. With this model we speed up the process of cavity detection, and we also enable patients to have access to these information  and be informed about their health.
 
 ## File github structure
-#### Trained model
-Trained Model Download ([Link](https://drive.google.com/file/d/1FYmIUx9zbJ4QnUsQueO6O48U0SOfx93I/view?usp=sharing))
 
 #### Dataset  
 We croppied individual teeth from 400 panoramic x-ray images, afther taht we were able to create 2 datasets we needed in order to train our model. One dataset contains healthy theeth and the other containts theeth with caries. <br>
@@ -74,6 +72,13 @@ To solve this problem, we used several pre-trained CNN models. The results are s
 Best overall results were achieved with transfer-learning using pre-trained **VGG16** an re-train it on our data.
 
 The learning curves for this model are shown in the figure below.
+  
+<img src="/images/Accuracy%20curve.png"/>
+  
+<p align="right">
+<img src="/images/Loss%20curve.png"/>
+ 
+During model training we used callback function for saving best modes weights. The best model weights can be download from this link ([Link](https://drive.google.com/file/d/1FYmIUx9zbJ4QnUsQueO6O48U0SOfx93I/view?usp=sharing))
 
 
 ### ✔️ Phase 3: Detection of cavity in panoramic x-rays
