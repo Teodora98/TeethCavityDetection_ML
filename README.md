@@ -41,8 +41,8 @@ We use binary classifier (cavity/no cavity) on detected objects
 ### 📥 Phase 1: Dataset collection
 In order to train a deep-learning model to classify whether a tooth is healty or with caries cavity, we needed an appropriate dataset with balanced distribution of images for the two classes:
   
-📂	Healthy teeth / without caries <br>
-📂	Teeth with Tooth decay / with caries
+📂	**Healthy teeth / without caries** <br>
+📂	**Teeth with Tooth decay / with caries**
 
 We use data from [Mendeley Data](https://data.mendeley.com/datasets/hxt48yk462/1). The dataset consists of anonymized and deidentified panoramic dental X-rays of 116 patients, taken at Noor Medical Imaging Center, Qom, Iran. The subjects cover a wide range of dental conditions from healthy, to partial and complete edentulous cases. From each image we cut each tooth separately and classified it into one of the groups. In the end, we got a set of 401 pictures of healthy teeth, and 400 pictures of teeth with caries, which we used further to train our model.
   
@@ -113,6 +113,9 @@ This part of the project is still under construction 👷‍♀️
 
 
 ##  Conclusion
+During the working process we faced some issues during collecting the data and quality of the images. Dental x-rays are considered personal data so we had a challenge to find public available images, because of that our dataset has limited resources.  While training our model we received results with around 90% accuracy. 
+With access to more data we will be able to improve the accuracy of our model.
+
 
 ## Future work
 The purpose of this model is to save the time that dentists lose in reading the dental imaging. With this model, with the recording itself, they will receive a ready analysis and dentists will be able to immediately focus on the teeth that need to be repaired.
@@ -125,5 +128,8 @@ In Macedonia, especially in small places, X-rays are taken outside dental office
 - Ana Angelova
 - Tanja Ivkovska
 - Mihaela Miova
+  
+ Special thank you to our mentor <br>
+ ⭐ Kiril Cvetkov
 
 
